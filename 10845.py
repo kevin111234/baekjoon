@@ -9,8 +9,8 @@ for i in range(n):
         queue.append(int(cmd[1]))
     elif cmd[0] == "pop":
         if len(queue) > 0:
-            print(queue[-1])
-            queue.pop(-1)
+            print(queue[0])
+            queue.pop(0)
         else:
             print(-1)
     elif cmd[0] == "size":
@@ -20,7 +20,12 @@ for i in range(n):
             print(1)
         else:
             print(0)
-    elif cmd[0] == "top":
+    elif cmd[0] == "front":
+        if len(queue) > 0:
+            print(queue[0])
+        else:
+            print(-1)
+    elif cmd[0] == "back":
         if len(queue) > 0:
             print(queue[-1])
         else:
